@@ -2,6 +2,7 @@ package tobyspring.hellospring;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import tobyspring.hellospring.payment.PaymentService;
 
 public class Singleton {
     public static void main(String[] args) {
