@@ -6,7 +6,7 @@ import tobyspring.hellospring.payment.PaymentService;
 
 public class Singleton {
     public static void main(String[] args) {
-        BeanFactory beanFactory = new AnnotationConfigApplicationContext(ObjectFactory.class);
+        BeanFactory beanFactory = new AnnotationConfigApplicationContext(PaymentConfig.class);
         PaymentService paymentService = beanFactory.getBean(PaymentService.class);
         PaymentService paymentService2 = beanFactory.getBean(PaymentService.class);
 
