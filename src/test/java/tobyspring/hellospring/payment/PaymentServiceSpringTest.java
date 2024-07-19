@@ -9,7 +9,6 @@ import tobyspring.hellospring.TestPaymentConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.Clock;
 import java.time.LocalDateTime;
@@ -29,7 +28,7 @@ class PaymentServiceSpringTest {
     Clock clock;
 
     @Test
-    void convertedAmount() throws IOException {
+    void convertedAmount() {
 //        BeanFactory beanFactory = new AnnotationConfigApplicationContext(TestObjectFactory.class); // 1
 //        PaymentService paymentService = beanFactory.getBean(PaymentService.class); // 1,2
 
@@ -48,7 +47,7 @@ class PaymentServiceSpringTest {
     }
 
     @Test
-    void validUntil() throws IOException {
+    void validUntil() {
         Payment payment = paymentService.prepare(1L, "USD", BigDecimal.TEN);
 
         // valid until이 prepare() 30분 뒤로 설정됐는가?
